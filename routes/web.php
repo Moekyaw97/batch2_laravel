@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@home')->name('homepage') ;
+Route::get('/', 'MainController@main')->name('homepage') ;
+Route::get('detail/{id}', 'MainController@detail')->name('detailpage') ;
 
 Route::get('main/{key}','PageController@main')->name('mainpage');
 
 Route::resource('staff','StaffController');// 7
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
