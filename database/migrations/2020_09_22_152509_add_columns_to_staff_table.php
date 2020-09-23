@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddColumnsToStaffTable extends Migration
+class AddColumnsToStaffTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateAddColumnsToStaffTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_columns_to_staff', function (Blueprint $table) {
-             $table->unsignedBigInteger('department_id');
+        Schema::table('staff', function (Blueprint $table) {
+            $table->unsignedBigInteger('department_id');
             $table->unsignedBigInteger('position_id');
 
             // Relationship
@@ -38,6 +38,9 @@ class CreateAddColumnsToStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_columns_to_staff');
+        Schema::table('staff', function (Blueprint $table) {
+            $table->dropColumn('department_id');
+            $table->dropColumn('position_id');
+        });
     }
 }

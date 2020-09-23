@@ -22,3 +22,11 @@ Route::resource('staff','StaffController');// 7
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('payrolls','PayrollController');
+
+Route::post('getstaff','PayrollController@getstaff')->name('getstaff');
+
+Route::post('getastaff','PayrollController@getastaff')->name('getastaff');
+
+Route::resource('posts','PostController');

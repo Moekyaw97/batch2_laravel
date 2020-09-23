@@ -2,7 +2,7 @@
     I begin to speak only when I am certain what I will say is not better left unsaid - Cato the Younger
 </div> --}}
 
-{{-- <div class="card my-4">
+<div class="card my-4">
   <h5 class="card-header">Categories</h5>
   <div class="card-body">
     <div class="row">
@@ -26,4 +26,4 @@
       </div>
     </div>
   </div>
-</div> --}}
+</div>
