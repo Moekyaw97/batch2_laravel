@@ -93,7 +93,7 @@ class StaffController extends Controller
      */
     public function edit(Staff $staff)
     {
-         $departments = Department::all();
+        $departments = Department::all();
         $positions = Position::all();
         return view('backend.staff.edit',compact('staff','departments','positions'));
     }

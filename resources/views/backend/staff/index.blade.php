@@ -1,4 +1,6 @@
+
 @extends('backendtemplate')
+@extends('layouts.app')
 @section('title','Staff List')
 
 @section('content')

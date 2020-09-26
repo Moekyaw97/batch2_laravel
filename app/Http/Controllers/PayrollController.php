@@ -44,20 +44,20 @@ class PayrollController extends Controller
     {
         $request->validate([
             "staff_id" => "required",
-            "attendance_bonus" => "required",
-            "attendance_deduction" => "required",
-            "other_bonus" => "required",
-            "other_deduction" => "required",
+            "a_bonus" => "required",
+            "a_dedu" => "required",
+            "o_bonus" => "required",
+            "o_dedu" => "required",
             "ssb" => "required",
             "total" => "required"
         ]);
 
         $payroll = new Payroll;
         $payroll->staff_id= $request->staff_id;
-        $payroll->attendance_bonus = $request->attendance_bonus;
-        $payroll->attendance_deduction = $request->attendance_deduction;
-        $payroll->other_bonus = $request->other_bonus;
-        $payroll->other_deduction = $request->other_deduction;
+        $payroll->attendance_bonus = $request->a_bonus;
+        $payroll->attendance_deduction = $request->a_dedu;
+        $payroll->other_bonus = $request->o_bonus;
+        $payroll->other_deduction = $request->o_dedu;
         $payroll->ssb = $request->ssb;
         $payroll->total = $request->total;
         $payroll->save();

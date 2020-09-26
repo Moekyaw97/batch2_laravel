@@ -1,5 +1,6 @@
 @extends('backendtemplate')
-@section('title','Staff List')
+@extends('layouts.app')
+@section('title','Payrolls List')
 
 @section('content')
   <div class="row">
@@ -42,6 +43,15 @@
           </div>
         </div>
       </form>
+      @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+      @endif
 
 
       <form id="payroll" method="post" action="{{route('payrolls.store')}}">

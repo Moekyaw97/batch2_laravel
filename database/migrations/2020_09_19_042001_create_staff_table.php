@@ -20,7 +20,7 @@ class CreateStaffTable extends Migration
             $table->string('phoneno');
             $table->text('address');
             $table->integer('salary');
-          
+  
 
             $table->timestamps();
            

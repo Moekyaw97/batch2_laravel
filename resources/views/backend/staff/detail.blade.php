@@ -1,4 +1,5 @@
 @extends('backendtemplate')
+@extends('layouts.app')
 @section('title','Staff List')
 
 @section('content')
@@ -11,8 +12,8 @@
 <p>Phone no :{{$staff->phoneno}}</p>
 <p>Salary :{{$staff->salary}}</p>
 <p>Address :{{$staff->address}}</p>
-<p>Department :{{$staff->department_id}}</p>
-<p>Position :{{$staff->position_id}}</p>
+<p>Department :{{$staff->department->name}}</p>
+<p>Position :{{$staff->position->name}}</p>
 </form>
 </div>
 </div>
